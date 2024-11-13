@@ -3,7 +3,7 @@
   "description": "A Discord bot; uses AI to determine if messages are 'toxic'.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"There are no tests to run!\""
   },
   "keywords": [
     "discord",
@@ -11,7 +11,7 @@
     "toxic",
     "AI"
   ],
-  "author": "midnightdoggo19",
+  "author": "@midnightdoggo19",
   "license": "CC BY-NC-SA 4.0",
   "homepage": "https://github.com/midnightdoggo19/aegis",
   "dependencies": {
