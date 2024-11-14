@@ -1,3 +1,5 @@
+console.log('Starting!')
+
 const { Client, GatewayIntentBits, REST, Routes } = require('discord.js');
 const fs = require('fs');
 const toxicity = require('@tensorflow-models/toxicity');
@@ -28,6 +30,7 @@ function logMessage(message, isToxic) {
   });
 }
 
+// Log updates to parameters via commands
 function logUpdate(parameter, oldValue, newValue) {
   const logEntry = `${new Date().toISOString()} - Updated ${parameter} from "${oldValue}" to "${newValue}"`;
   console.log(logEntry);
@@ -59,7 +62,7 @@ client.on('interactionCreate', async (interaction) => {
 
   const { commandName, options } = interaction;
 
-  if (commandName === 'setthreshold') {
+  if (commandName === 'setthreshold') { // Command
     const newThreshold = options.getNumber('value');
     if (newThreshold < 0 || newThreshold > 1) {
       await interaction.reply({ content: 'Please enter a threshold between 0 and 1.', ephemeral: true });
@@ -69,7 +72,7 @@ client.on('interactionCreate', async (interaction) => {
       threshold = newThreshold;
       await interaction.reply(`Toxicity threshold updated to ${threshold}.`);
     }
-  } else if (commandName === 'setwarning') {
+  } else if (commandName === 'setwarning') { // Command
     const newWarningMessage = options.getString('message');
 
     // Log the old and new warning messages
