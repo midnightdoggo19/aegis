@@ -1,7 +1,6 @@
 # Aegis
 
-Aegis is a Discord bot designed to help maintain a positive community environment by detecting and managing potentially toxic content. With customizable settings, Aegis assists server administrators in moderating chat effectively.
-Features include: <br />
+Aegis is a Discord bot designed to help maintain a positive community environment by detecting and managing potentially toxic content. With customizable settings, Aegis assists server administrators in moderating chat effectively.<br />
 
 ## Getting Started
 
